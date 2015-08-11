@@ -1,5 +1,7 @@
 package it250.services;
 
+import it250.dao.KorisnikDao;
+import it250.dao.KorisnikDaoImpl;
 import it250.dao.SobaDao;
 import it250.dao.SobaDaoImpl;
 import java.io.IOException;
@@ -24,6 +26,7 @@ public class AppModule
     public static void bind(ServiceBinder binder)
     {
         binder.bind(SobaDao.class, SobaDaoImpl.class);
+        binder.bind(KorisnikDao.class, KorisnikDaoImpl.class);
         // binder.bind(MyServiceInterface.class, MyServiceImpl.class);
 
         // Make bind() calls on the binder object to define most IoC services.
