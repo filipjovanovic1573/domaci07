@@ -1,0 +1,25 @@
+<html t:type="layout" title="Pregled soba"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <t:beaneditform class="col-md-offset-4 col-md-4" t:submitlabel="Dodaj" exclude="id">
+        <p:sprat>
+            <t:textfield t:id="sprat" value="spratValue" placeholder="Sprat"/>
+        </p:sprat>
+        <p:tv>
+            <t:checkbox t:id="tv" value="tvValue"/> <t:label for="tv"/>
+        </p:tv>
+        <p:internet>
+            <t:checkbox t:id="internet" value="internetValue"/> <t:label for="internet"/>
+        </p:internet>
+        <p:djakuzi>
+            <t:checkbox t:id="djakuzi" value="djakuziValue"/> <t:label for="djakuzi"/>
+        </p:djakuzi>
+        <p:korisnikId>
+            <input t:id="select" t:type="select" value="korisnikValue" model="listaKorisnika"/>
+        </p:korisnikId>
+    </t:beaneditform>
+    
+    <t:grid object="listaSoba" encoder="encoder"/>
+
+</html>
